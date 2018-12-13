@@ -14,7 +14,7 @@ public class Healer extends Fighter{
 	        if(damage >= 12) {
 	        	
 	        	// they get 7 points added back to their health
-	            return super.takeDamage(damage - 7, type);
+	            return super.takeDamage(damage - 9, type);
 	        }
 
 	        return damage;

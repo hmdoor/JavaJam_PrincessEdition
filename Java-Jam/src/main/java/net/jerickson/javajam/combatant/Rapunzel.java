@@ -1,17 +1,18 @@
 package net.jerickson.javajam.combatant;
+
 import net.jerickson.javajam.combatant.classes.Fighter;
 import net.jerickson.javajam.weapon.DamageType;
 
-public class Elsa extends Fighter{
+public class Rapunzel extends Fighter{
 	
-	public Elsa() {
-		super(140, 10);
+	public Rapunzel() {
+		super(120,9);
 	}
 	   @Override
 	    public int takeDamage(int damage, DamageType type) {
-	        // The only way to fight ice is with fire. A flaming arrow can melt the heart
-		   	// and powers of it's greatest adversary
-	        if(type.equals(DamageType.FIRE)) {
+	        // This princess holds her powers in her hair
+		   	// therefore, anything sharp that could cut it will be her downfall
+	        if(type.equals(DamageType.SLASHING)) {
 	            damage *= 2;
 	        }
 
@@ -19,7 +20,7 @@ public class Elsa extends Fighter{
 	    }
 
 	    public String toString() {
-	        return "Elsa";
+	        return "Rapunzel";
 	    }
 
 }
