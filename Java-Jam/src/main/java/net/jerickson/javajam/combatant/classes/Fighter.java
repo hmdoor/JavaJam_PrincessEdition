@@ -9,23 +9,27 @@ import net.jerickson.javajam.weapon.Strikable;
  */
 public abstract class Fighter implements Fightable {
 
-    private Strikable weapon;
+	private Strikable weapon;
 	private int health;
-    private int damageModifier;
+	private int damageModifier;
 
-    public Fighter(int health, int damageModifier) {
-        this.health = health;
-        this.damageModifier = damageModifier;
-    }
+	public Fighter(int health, int damageModifier) {
+		this.health = health;
+		this.damageModifier = damageModifier;
+	}
 
 	public int dealDamage() {
 		return weapon.dealDamage() + damageModifier;
 	}
 
 	public int getHealth() {
-		return health;
+		if (health <= 0) {
+			this.health = 0;
+			return this.health;
+		} else {
+			return health;
+		}
 	}
-
 
 	public int takeDamage(int damage, DamageType type) {
 		health -= damage;
@@ -37,8 +41,9 @@ public abstract class Fighter implements Fightable {
 	}
 
 	public boolean isDead() {
-		if(health <= 0) {
-		return true;
+		if (health <= 0) {
+			this.health = 0;
+			return true;
 		}
 		return false;
 	}
@@ -51,5 +56,4 @@ public abstract class Fighter implements Fightable {
 		return weapon;
 	}
 
-    
 }
