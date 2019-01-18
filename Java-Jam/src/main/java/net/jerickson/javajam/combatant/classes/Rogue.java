@@ -13,8 +13,8 @@ public class Rogue extends Fighter {
 
 	public int takeDamage(int damage, DamageType type) {
 		// Slippery Rouges can dodge a lot of damage
-		// In fact, they dodge all big hits over 18
-		if (damage >= 18) {
+		// In fact, they dodge all big hits over 17
+		if (damage >= 17) {
 			return 0;
 		}
 		if (damage <= 14) {

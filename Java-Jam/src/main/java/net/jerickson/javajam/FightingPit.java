@@ -3,16 +3,25 @@ package net.jerickson.javajam;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
+import net.jerickson.javajam.combatant.Ariel;
+import net.jerickson.javajam.combatant.Belle;
+import net.jerickson.javajam.combatant.Cinderella;
 import net.jerickson.javajam.combatant.Elsa;
 import net.jerickson.javajam.combatant.Fightable;
+import net.jerickson.javajam.combatant.Jasmine;
 import net.jerickson.javajam.combatant.Merida;
 import net.jerickson.javajam.combatant.Mulan;
 import net.jerickson.javajam.combatant.Pocahontas;
 import net.jerickson.javajam.combatant.Rapunzel;
 import net.jerickson.javajam.weapon.FlamingArrow;
 import net.jerickson.javajam.weapon.FryingPan;
+import net.jerickson.javajam.weapon.GlassSlipperShiv;
 import net.jerickson.javajam.weapon.GrandmotherWillowBranch;
 import net.jerickson.javajam.weapon.IceStorm;
+import net.jerickson.javajam.weapon.KingTritonsTrident;
+import net.jerickson.javajam.weapon.PoisonApple;
+import net.jerickson.javajam.weapon.RajahFang;
+import net.jerickson.javajam.weapon.RoseThorn;
 import net.jerickson.javajam.weapon.Strikable;
 import net.jerickson.javajam.weapon.SwordOfShanYu;
 
@@ -23,18 +32,28 @@ public class FightingPit {
 
     private static Fightable[] fighterOptions = {
         new Mulan(),
-        new Pocahontas(),
         new Elsa(),
         new Merida(),
-        new Rapunzel()
+        new Rapunzel(),
+        new Pocahontas(),
+        new Jasmine(),
+        new Ariel(),
+        new Belle(),
+        new SnowWhite(),
+        new Cinderella()
     };
 
     private static Strikable[] weaponOptions = {
         new SwordOfShanYu(),
-        new GrandmotherWillowBranch(),
         new IceStorm(),
         new FlamingArrow(),
-        new FryingPan()
+        new FryingPan(),
+        new GrandmotherWillowBranch(),
+        new RajahFang(),
+        new KingTritonsTrident(),
+        new RoseThorn(),
+        new PoisonApple(),
+        new GlassSlipperShiv()
     };
 
     Scanner input;
